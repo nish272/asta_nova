@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+.products {
+    padding: 0px 80px;
+    background: #f8fafc;
+}
+
+.products h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary);
+    font-size: 40px;
+}
+
+/* ================= FILTER ================= */
+.product-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    /* mobile wrap */
+}
+
+.product-filter button {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.product-filter .active {
+    background: var(--primary);
+    color: white;
+}
+
+/* ================= GRID ================= */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ================= CARD ================= */
+.product-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+.product-card span {
+    display: inline-block;
+    margin: 12px 0;
+    background: var(--secondary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* ================= BUTTON ================= */
+.product-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ================= MODAL ================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.modal h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+
+.modal span {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--secondary);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.modal button {
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ================= TABLET (≤ 1024px) ================= */
+@media (max-width: 1024px) {
+    .products {
+        padding: 0px 40px;
+    }
+
+    .products h1 {
+        font-size: 34px;
+    }
+}
+
+/* ================= MOBILE (≤ 600px) ================= */
+@media (max-width: 600px) {
+    .products {
+        padding: 0px 15px;
+        margin-left: 30px;
+    }
+
+    .products h1 {
+        font-size: 26px;
+      
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .modal {
+        padding: 22px;
+    }
+}
+/* ================= PRODUCTS SECTION ================= */
+
+.products-section {
+    padding: 80px 20px;
+    background-color: white;
+    color: black;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.products-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.products-header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.products-header h2 span {
+    color: #38bdf8;
+}
+
+.products-header p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.product-card {
+    background: rgba(56, 189, 248, 0.06);
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #38bdf8;
+}
+
+.product-card p {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: #38bdf8;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.product-card a:hover {
+    border-color: #38bdf8;
+}
+
+/* ================= LAPTOP (≤ 1200px) ================= */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .products-header h2 {
+        font-size: 36px;
+    }
+}
+
+/* ================= TABLET (≤ 900px) ================= */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-header h2 {
+        font-size: 32px;
+    }
+}
+
+/* ================= MOBILE (≤ 600px) ================= */
+@media (max-width: 600px) {
+    .products-section {
+        padding: 60px 15px;
+    }
+
+    .products-header h2 {
+        font-size: 26px;
+    }
+
+    .products-header p {
+        font-size: 14.5px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 28px 20px;
+    }
+}
+/* COMMON */
+section h2 span {
+    color: #38bdf8;
+}
+
+.section-desc {
+    max-width: 700px;
+    margin: 15px auto 40px;
+    text-align: center;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ================= CERTIFICATIONS ================= */
+
+.certifications-section {
+    padding: 80px 20px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+.certifications-section h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.certifications-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.cert-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ================= LAPTOP (≤ 1200px) ================= */
+@media (max-width: 1200px) {
+    .certifications-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ================= TABLET (≤ 900px) ================= */
+@media (max-width: 900px) {
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .certifications-section h2 {
+        font-size: 34px;
+    }
+}
+
+/* ================= MOBILE (≤ 600px) ================= */
+@media (max-width: 600px) {
+    .certifications-section {
+        padding: 60px 15px;
+    }
+
+    .certifications-section h2 {
+        font-size: 28px;
+    }
+
+    .section-desc {
+        font-size: 14.5px;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+        padding: 22px;
+        font-size: 14px;
+    }
+}
+/* ================= MANUFACTURING ================= */
+
+.manufacturing-section {
+    padding: 90px 20px;
+    background: white;
+}
+
+.manufacturing-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.manufacturing-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.manufacturing-content h2 span {
+    color: #38bdf8;
+}
+
+.manufacturing-content p {
+    max-width: 750px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #444;
+}
+
+/* List */
+.manufacturing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.manufacturing-list li {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #020617;
+}
+
+/* ================= LAPTOP (≤ 1200px) ================= */
+@media (max-width: 1200px) {
+    .manufacturing-content h2 {
+        font-size: 34px;
+    }
+}
+
+/* ================= TABLET (≤ 900px) ================= */
+@media (max-width: 900px) {
+    .manufacturing-section {
+        padding: 70px 20px;
+    }
+
+    .manufacturing-content {
+        text-align: center;
+    }
+
+    .manufacturing-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ================= MOBILE (≤ 600px) ================= */
+@media (max-width: 600px) {
+    .manufacturing-section {
+        padding: 60px 15px;
+    }
+
+    .manufacturing-content h2 {
+        font-size: 28px;
+    }
+
+    .manufacturing-content p {
+        font-size: 14.5px;
+    }
+
+    .manufacturing-list li {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* vertical center */
+    padding: 0 8%;
+    color: #ffffff;
+    margin-top: -80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(2, 6, 23, 0.85),
+            rgba(2, 6, 23, 0.45));
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #38bdf8;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Common Button */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 36px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Primary */
+.btn-primary {
+    background: #38bdf8;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0ea5e9;
+}
+
+/* Secondary */
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #38bdf8;
+}
+
+.btn-secondary:hover {
+    background: #38bdf8;
+    color: white;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .hero {
+        padding: 0 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .hero {
+        height: 90vh;
+        padding: 0 5%;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ABOUT INTRO */
+.about-intro {
+    padding: 90px 20px;
+    background-color: #ffffff;
+    color: #020617;
+}
+
+.about-intro-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Image */
+.about-intro-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Content */
+.about-intro-content h5 {
+    letter-spacing: 2px;
+    color: #38bdf8;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.about-intro-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-intro-content h2 span {
+    color: #38bdf8;
+}
+
+.about-intro-content p {
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #020617;
+}
+
+/* Button */
+.about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 34px;
+    border-radius: 30px;
+    background: #38bdf8;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background: #0ea5e9;
+}
+
+/* =========================
+   TABLET (≤ 900px)
+========================= */
+@media (max-width: 900px) {
+    .about-intro {
+        padding: 70px 20px;
+    }
+
+    .about-intro-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-intro-content h2 {
+        font-size: 32px;
+    }
+
+    .about-intro-content p {
+        font-size: 15px;
+    }
+}
+
+/* =========================
+   MOBILE (≤ 600px)
+========================= */
+@media (max-width: 600px) {
+    .about-intro {
+        padding: 60px 15px;
+    }
+
+    .about-intro-content h5 {
+        font-size: 13px;
+    }
+
+    .about-intro-content h2 {
+        font-size: 26px;
+    }
+
+    .about-intro-content p {
+        font-size: 14px;
+    }
+
+    .about-btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 0;
+    }
+}
+
+/* VALUES SECTION */
+.values-section {
+    background-color: white;
+    padding: 80px 20px;
+    color: black;
+}
+
+.values-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Content */
+.values-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.values-content h2 span {
+    color: #38bdf8;
+}
+
+.values-content p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: black;
+    margin-bottom: 35px;
+}
+
+/* Cards */
+.values-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background: rgba(56, 189, 248, 0.06);
+    padding: 25px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.value-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.value-card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: black;
+}
+
+/* Image */
+.values-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   TABLET (≤ 1024px)
+========================= */
+@media (max-width: 1024px) {
+    .values-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .values-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-content h2 {
+        font-size: 36px;
+    }
+}
+
+/* =========================
+   MOBILE (≤ 600px)
+========================= */
+@media (max-width: 600px) {
+    .values-section {
+        padding: 60px 15px;
+    }
+
+    .values-content h2 {
+        font-size: 28px;
+    }
+
+    .values-content p {
+        font-size: 15px;
+    }
+
+    .values-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card {
+        padding: 20px;
+    }
+}
+
+/* PRODUCTS SECTION */
+.products-section {
+    padding: 80px 20px;
+    background-color: white;
+    color: black;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.products-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.products-header h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.products-header h2 span {
+    color: #38bdf8;
+}
+
+.products-header p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+    color: black;
+}
+
+/* Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Card */
+.product-card {
+    background: rgba(56, 189, 248, 0.06);
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    background: rgba(56, 189, 248, 0.12);
+}
+
+.product-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.product-card p {
+    font-size: 14.5px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.product-card a:hover {
+    border-color: #38bdf8;
+}
+
+/* =========================
+   LAPTOP (≤ 1200px)
+========================= */
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* =========================
+   TABLET (≤ 900px)
+========================= */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-header h2 {
+        font-size: 34px;
+    }
+}
+
+/* =========================
+   MOBILE (≤ 600px)
+========================= */
+@media (max-width: 600px) {
+    .products-section {
+        padding: 60px 15px;
+    }
+
+    .products-header h2 {
+        font-size: 28px;
+    }
+
+    .products-header p {
+        font-size: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        padding: 28px 20px;
+    }
+}
