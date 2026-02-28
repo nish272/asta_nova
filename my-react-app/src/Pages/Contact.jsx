@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./contact.css";
-import { sendContactData } from "../api/contactApi";
+
+import { useLocation } from "react-router-dom";
 
 export default function ContactForm() {
 
@@ -11,6 +12,15 @@ export default function ContactForm() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+
+  const location = useLocation();
+  const product = location.state?.product;
+
+  useEffect(() => {
+    if (product) {
+      setFormData(prev => ({ ...prev, message: `I am interested in ${product.title}.` }));
+    }
+  }, [product]);
 
   const handleChange = (e) => {
     setFormData({ 
@@ -78,6 +88,12 @@ export default function ContactForm() {
             every time.
           </p>
         </div>
+        {product && (
+          <div className="selected-product-hero">
+            <img src={product.image} alt={product.title} style={{ maxWidth: 220 }} />
+            <h3>Inquiry about {product.title}</h3>
+          </div>
+        )}
       </section>
 
       {/* CONTACT DETAILS */}

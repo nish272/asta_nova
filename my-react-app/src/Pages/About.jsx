@@ -1,7 +1,7 @@
 import "./About.css";
-import about from "../assets/peogram1.jpg"
+import about from "../assets/in4.jpeg"
 
-import aboutImg from "../assets/doctor.png"
+import aboutImg from "../assets/khare.jpeg"
 export default function About() {
   return (
     <>

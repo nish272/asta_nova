@@ -144,7 +144,9 @@ export default function Home() {
             <div className="product-card" key={index}>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
-              <NavLink to="/products">Explore</NavLink>
+              <NavLink to="/products" state={{ category: item.title }}>
+                 Explore
+                 </NavLink>
             </div>
           ))}
         </div>
