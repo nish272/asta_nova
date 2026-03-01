@@ -44,7 +44,7 @@ export default function ContactForm() {
     try {
       // Add 10 second timeout
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      const timeoutId = setTimeout(() => controller.abort(), 180000);
 
       const result = await Promise.race([
         sendContactData(formData),
