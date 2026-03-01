@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./contact.css";
-
 import { useLocation } from "react-router-dom";
+import { sendContactData } from "../api/contactApi";
 
 export default function ContactForm() {
 
@@ -46,26 +46,21 @@ export default function ContactForm() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-      const response = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-        signal: controller.signal,
-      });
+      const result = await Promise.race([
+        sendContactData(formData),
+        new Promise((_, reject) => timeoutId && setTimeout(() => reject(new Error('Timeout')), 10000))
+      ]);
 
       clearTimeout(timeoutId);
 
-      if (response.ok) {
-        const result = await response.json();
+      if (result.success) {
         alert("✅ Thank you! Your message has been received.");
         setFormData({ name: "", phone: "", message: "" });
       } else {
         alert("❌ Something went wrong. Please try again.");
       }
     } catch (error) {
-      if (error.name === 'AbortError') {
+      if (error.message === 'Timeout') {
         alert("⏱️ Request took too long. Please try again.");
       } else {
         alert("❌ Network error. Please check your connection.");
