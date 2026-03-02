@@ -105,8 +105,8 @@ export default function ContactForm() {
             </p>
 
             <ul>
-              <li><strong>Email:</strong> contact@greatstack.dev</li>
-              <li><strong>Phone:</strong> +91 723-456-7890</li>
+              <li><strong>Email:</strong> astonovabiotech@gmail.com</li>
+              <li><strong>Phone:</strong> +91 87934-34634</li>
             </ul>
 
             <div className="office-location">

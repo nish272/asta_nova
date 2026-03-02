@@ -41,7 +41,7 @@ export default function About() {
     </div>
 
     <div className="founder-content">
-      <h2>Akarshit Arundhati Khare</h2>
+      <h2>Arundhati Akarshit Khare</h2>
       <h4>Founder – AstNova BioPharma</h4>
 
       <p>

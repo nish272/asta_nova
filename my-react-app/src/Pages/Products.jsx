@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Products.css";
-import astonem from "../assets/astonem.jpg";
+import astonem from "../assets/asto16.jpeg";
 import astocef from "../assets/astocef.jpg";
 import astopip from "../assets/astopip.jpg";
 

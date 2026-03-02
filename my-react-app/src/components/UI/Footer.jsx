@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -28,10 +29,26 @@ export const Footer = () => {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Product</li>
-            <li>Contact</li>
+            <li>
+              <NavLink to="/" end>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/products">
+                Product
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact">
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
 

@@ -73,10 +73,16 @@
     margin-bottom: 12px;
     cursor: pointer;
     transition: 0.3s;
+    color: #fff; /* default white text */
+}
+
+.footer-links ul li a {
+    color: inherit; /* ensure links inherit the li color */
+    text-decoration: none;
 }
 
 .footer-links ul li:hover {
-    color:#38bdf8;
+    color: white;
     padding-left: 4px;
 }
 
